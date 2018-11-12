@@ -1,8 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-nav (navigation)="navigate($event)"></app-nav>
 <div class="content-wrapper" [class]="{'currentView': true }">
     <ng-container *ngIf="data | async as context">
-        <app-list (action)="onAction($event)" *ngIf="this.currentView=='list'" [data]="context[0]"></app-list>
-        <app-profile [favorites]="favorites" [votes]="votes"></app-profile>
+        <app-list (action)="onAction($event)" *ngIf="this.currentView=='list'" [data]="images"></app-list>
+        <app-profile (action)="onAction($event)" [favorites]="favorites" [votes]="votes"></app-profile>
     </ng-container>
 </div>

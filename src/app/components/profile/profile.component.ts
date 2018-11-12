@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ChangeDetectionStrategy, SimpleChange, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectionStrategy, SimpleChange, SimpleChanges, OnChanges, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -9,17 +9,20 @@ import { Component, OnInit, Input, ChangeDetectionStrategy, SimpleChange, Simple
 export class ProfileComponent implements OnInit {
   @Input() favorites : any;
   @Input() votes : any;
- 
+
+  @Output() action = new EventEmitter() ;
 
   constructor() { }
 
   ngOnInit() {
-   
+
   }
 
   ngOnChanges( changes : SimpleChanges ){
-    
+
   }
 
+  onAction($event){
+    this.action.emit($event);
+  }
 }
- 

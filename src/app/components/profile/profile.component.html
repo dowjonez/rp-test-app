@@ -1,6 +1,5 @@
-{{this.favorites}}
 <ng-container *ngIf="favorites | async as favList ">
-    <ng-container *ngFor="let image of favList">
-        <app-media-cell class="current" [image]="image.image"></app-media-cell>
+    <ng-container *ngFor="let fav of favList">
+        <app-media-cell (action)="onAction($event)" [favId]="fav.id" *ngIf="fav.favorited" class="current" [image]="fav.image" [voteObject]="fav.vote" [favorited]="fav.favorited"></app-media-cell>
     </ng-container>
 </ng-container>
