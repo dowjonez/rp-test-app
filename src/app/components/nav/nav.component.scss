@@ -1,0 +1,13 @@
+:host {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background: white;
+    display: block;
+    .icon-person_pin {
+        font-size: 30px;
+        height: 50px;
+        line-height: 50px;
+        margin: 10px;
+    }
+}

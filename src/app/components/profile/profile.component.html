@@ -1,0 +1,6 @@
+{{this.favorites}}
+<ng-container *ngIf="favorites | async as favList ">
+    <ng-container *ngFor="let image of favList">
+        <app-media-cell class="current" [image]="image.image"></app-media-cell>
+    </ng-container>
+</ng-container>

@@ -1,0 +1,7 @@
+<ng-container *ngIf="data">
+    <div class='img-container'>
+        <ng-container *ngFor="let image of data">
+            <app-media-cell class="single" (action)="onAction($event)" [image]="image" [class.current]="currentImage==image.id"></app-media-cell>
+        </ng-container>
+    </div>
+</ng-container>

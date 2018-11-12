@@ -1,0 +1,7 @@
+<div class="background" [ngStyle]="{'background-image': 'url(' + image.url + ')'}"></div>
+
+<div class='vote-container'>
+    <div class="icon icon-thumbs-up" [ngClass]="{selected: liked && voteId}" (click)="vote(true);"></div>
+    <div class="icon icon-thumbs-down" [ngClass]="{selected: !liked  && voteId}" (click)="vote(false);"></div>
+    <div class="icon icon-bookmark" [ngClass]="{selected: favorited}" (click)="toggleFavorite()"></div>
+</div>
