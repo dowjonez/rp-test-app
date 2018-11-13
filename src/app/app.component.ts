@@ -2,7 +2,7 @@ import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectorRef } fro
 import { ApiService } from './services/api.service';
 import { Observable, of, merge, concat, combineLatest, BehaviorSubject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { ConsoleReporter } from 'jasmine';
+
 
 @Component({
   selector: 'app-root',
