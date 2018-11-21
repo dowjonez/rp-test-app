@@ -1,7 +1,7 @@
 <ng-container *ngIf="data | async as imageData">
     <div class='img-container'>
         <ng-container *ngFor="let image of imageData">
-            <app-media-cell class="single" (action)="onAction($event)" [image]="image" [class.current]="currentImage==image.id"></app-media-cell>
+            <app-media-cell class="single vote-list-item" (action)="onAction($event)" [image]="image" *ngIf="currentImage==image.id"></app-media-cell>
         </ng-container>
     </div>
 </ng-container>

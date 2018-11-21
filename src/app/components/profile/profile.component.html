@@ -1,5 +1,5 @@
 <ng-container *ngIf="favorites | async as favList ">
     <ng-container *ngFor="let fav of favList">
-        <app-media-cell (action)="onAction($event)" [favId]="fav.id" *ngIf="fav.favorited" class="current" [image]="fav.image" [voteObject]="fav.vote" [favorited]="fav.favorited"></app-media-cell>
+        <app-media-cell (action)="onAction($event)" [favId]="fav.id" *ngIf="fav.favorited" class="current profile-interaction-item" [image]="fav.image" [voteObject]="fav.vote" [favorited]="fav.favorited"></app-media-cell>
     </ng-container>
 </ng-container>

@@ -1,9 +1,10 @@
 <ng-container *ngIf="image">
-    <div class="background" [ngStyle]="{'background-image': 'url(' + image.url + ')'}"></div>
+    <div class="background" [ngStyle]="{'background-image': 'url(' + image.url + ')'}">
+        <div class="spacer"></div>
+        <div class='vote-container'>
+            <div class="icon icon-thumbs-up" [ngClass]="{selected:    voteObject && voteObject.value }" (click)="vote(true);"></div>
+            <div class="icon icon-thumbs-down" [ngClass]="{selected:  voteObject && !voteObject.value  }" (click)="vote(false);"></div>
+            <div class="icon icon-bookmark" [ngClass]="{selected: favorited}" (click)="toggleFavorite()"></div>
+        </div>
+    </div>
 </ng-container>
-
-<div class='vote-container'>
-    <div class="icon icon-thumbs-up" [ngClass]="{selected:    voteObject && voteObject.value }" (click)="vote(true);"></div>
-    <div class="icon icon-thumbs-down" [ngClass]="{selected:  voteObject && !voteObject.value  }" (click)="vote(false);"></div>
-    <div class="icon icon-bookmark" [ngClass]="{selected: favorited}" (click)="toggleFavorite()"></div>
-</div>
